@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+    format('truetype-variations');
+  font-weight: 500 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --primary-red: hsl(1, 90%, 64%);
+  --primary-blue: hsl(219, 85%, 26%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+  --neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --neutral-grayish-blue: hsl(219, 14%, 63%);
+  --neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+  --neutral-very-dark-blue: hsl(224, 21%, 14%);
+
+  /* Fonts */
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+  --size-primary: 16px;
+  --size-title: 24px;
+  --font-normal: 500;
+  --font-bold: 800;
+
+  /* Marings & Paddings */
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 2rem;
+}
+
+/* Core */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--neutral-very-dark-blue);
+  font-family: var(--font-primary);
+  font-weight: var(--font-normal);
+  font-size: var(--size-primary);
+  background-color: var(--neutral-very-light-grayish-blue);
+}
+
+/* Body Wrapper */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Notifications Container */
+.notifications-container {
+  width: 100%;
+  height: 100%;
+  padding: var(--padding-large);
+  background-color: var(--neutral-white);
+}
+
+@media (min-width: 800px) {
+  .notifications-container {
+    width: 50%;
+    height: 85%;
+    border-radius: var(--padding-small);
+  }
+}
+
+/* Heading */
+.container-heading {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+@media (min-width: 380px) {
+  .container-heading {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
+
+.notifications-heading {
+  font-weight: var(--font-bold);
+  font-size: var(--size-title);
+  position: relative;
+}
+
+/* Notifications Number */
+.notifications-heading::after {
+  content: '77';
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 26px;
+  font-size: var(--size-primary);
+  line-height: 26px;
+  border-radius: var(--padding-small);
+  background-color: var(--primary-blue);
+  margin-left: 5px;
+  bottom: 5px;
+  color: var(--neutral-white);
+  text-align: center;
+}
+
+/* Mark All As Read */
+.mark-all {
+  font-size: var(--size-primary);
+  color: var(--neutral-dark-grayish-blue);
+  font-weight: var(--font-normal);
+}
+
+/* Notifications */
+.notifications-list {
+  width: 100%;
+  height: 100%;
+  padding: var(--padding-medium) var(--padding-small);
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: var(--padding-small);
+}
+
+.notification-item {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--padding-small);
+  padding: var(--padding-medium);
+  border-radius: var(--padding-small);
+  background-color: var(--neutral-light-grayish-blue-1);
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.notification-main {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  font-size: var(--size-primary);
+  font-weight: var(--font-normal);
+  width: 100%;
+}
+
+/* Notification Content */
+.notification-content {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--padding-small);
+  position: relative;
+}
+
+.notification-text {
+  word-wrap: break-word;
+  line-break: strict;
+  padding-right: 50px;
+}
+
+/* Red Alert */
+.notification-text::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  position: relative;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+/* Notification Strong */
+.notification-strong {
+  margin-left: 4px;
+}
+
+/* Notification Link */
+.notification-link {
+  margin-left: 4px;
+  color: var(--primary-blue);
+}
+
+/* Notification Image */
+.notification-image {
+  width: 48px;
+  position: absolute;
+  display: inline;
+  right: 0;
+}
+
+/* User */
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--neutral-light-grayish-blue-1);
+}
+
+.user-name {
+  font-weight: var(--font-bold);
+  color: var(--neutral-very-dark-blue);
+  padding-right: 6px;
+}
+
+/* Time */
+.notification-footer {
+  color: var(--neutral-grayish-blue);
+  font-weight: var(--font-normal);
+}
+
+/* DM - Direct Message */
+.notification-dm {
+  background-color: var(--neutral-white);
+  border: 1px solid var(--neutral-light-grayish-blue-2);
+  padding: var(--padding-medium);
+}
