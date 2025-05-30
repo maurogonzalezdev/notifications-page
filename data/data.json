@@ -3,6 +3,7 @@
     {
       "id": 1,
       "status": "unread",
+      "time": "1m ago",
       "content": {
         "type": "react",
         "title": "My first tournament today!",
@@ -17,6 +18,7 @@
     {
       "id": 2,
       "status": "unread",
+      "time": "5m ago",
       "content": {
         "type": "follow",
         "user": {
@@ -29,6 +31,7 @@
     {
       "id": 3,
       "status": "unread",
+      "time": "1 day ago",
       "content": {
         "type": "join",
         "group": "Chess Club",
@@ -43,6 +46,7 @@
     {
       "id": 4,
       "status": "unread",
+      "time": "5 days ago",
       "content": {
         "type": "pm",
         "message": "Hello. Thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
@@ -56,6 +60,7 @@
     {
       "id": 5,
       "status": "unread",
+      "time": "1 week ago",
       "content": {
         "type": "comment",
         "picture": "/assets/images/image-chess.webp",
@@ -69,6 +74,7 @@
     {
       "id": 6,
       "status": "unread",
+      "time": "2 weeks ago",
       "content": {
         "type": "react",
         "title": "5 end-game strategies to increase your win rate",
@@ -83,6 +89,7 @@
     {
       "id": 7,
       "status": "unread",
+      "time": "2 weeks ago",
       "content": {
         "type": "leave",
         "group": "Chess Club",
