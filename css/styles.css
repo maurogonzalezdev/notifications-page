@@ -96,8 +96,8 @@ body {
 }
 
 /* Notifications Number */
-.notifications-heading::after {
-  content: '77';
+.notifications-count {
+  content: '';
   position: relative;
   display: inline-block;
   width: 32px;
@@ -117,6 +117,11 @@ body {
   font-size: var(--size-primary);
   color: var(--neutral-dark-grayish-blue);
   font-weight: var(--font-normal);
+  cursor: pointer;
+}
+
+.mark-all:hover {
+  color: var(--primary-blue);
 }
 
 /* Notifications */
@@ -144,6 +149,15 @@ body {
   border-radius: var(--padding-small);
   background-color: var(--neutral-light-grayish-blue-1);
   color: var(--neutral-dark-grayish-blue);
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background-color: var(--neutral-light-grayish-blue-2);
+}
+
+.notification-unread {
+  background-color: var(--neutral-light-grayish-blue-2);
 }
 
 .notification-main {
@@ -173,8 +187,7 @@ body {
 }
 
 /* Red Alert */
-.notification-text::after {
-  content: '';
+.notification-active {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -190,9 +203,10 @@ body {
 }
 
 /* Notification Link */
-.notification-link {
+.notification-link a {
   margin-left: 4px;
   color: var(--primary-blue);
+  text-decoration: none;
 }
 
 /* Notification Image */
@@ -215,6 +229,7 @@ body {
   font-weight: var(--font-bold);
   color: var(--neutral-very-dark-blue);
   padding-right: 6px;
+  text-transform: capitalize;
 }
 
 /* Time */
